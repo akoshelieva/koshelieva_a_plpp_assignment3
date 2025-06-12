@@ -30,7 +30,5 @@
 6. Пам’ять, виділена для зашифрованого та дешифрованого тексту, коректно звільняється.
 
 ## Тестування
-![image](https://github.com/user-attachments/assets/9abe354c-807e-4df1-bd8e-62c73cd1685a)
-
-
+![image](https://github.com/user-attachments/assets/092236b2-26fc-482f-8b74-fc9fa4a7e8b4)
 
