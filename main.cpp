@@ -22,14 +22,15 @@ int main() {
         return 1;
     }
 
-    const char* rawText[3] = {"Hello World!", "", "Some kind of text ()}{+-"};
+    const char* rawText[3] = {"Hello World!", "KEY", "Some kind of text ()}{+-"};
+    int keys[3] {-1, 4, 111};
 
     for (int key = 0; key < 3; key++) {
 
-        char* encrypted = encrypt((char*)rawText[key], key);
+        char* encrypted = encrypt((char*)rawText[key], keys[key]);
         if (encrypted) {
             std::cout << "Encrypted: " << encrypted << std::endl;
-            char* decrypted = decrypt(encrypted, key);
+            char* decrypted = decrypt(encrypted, keys[key]);
             if (decrypted) {
                 std::cout << "Decrypted: " << decrypted << std::endl;
                 delete[] decrypted;
