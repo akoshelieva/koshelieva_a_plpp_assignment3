@@ -1,15 +1,30 @@
-#ifndef CAESAR_H
-#define CAESAR_H
+// #ifndef CAESAR_H
+// #define CAESAR_H
 
-#ifdef __cplusplus
+#pragma once
+
+#ifdef _WIN32
+  #ifdef BUILD_DLL
+    #define CELIB_API __declspec(dllexport)
+  #else
+    #define CELIB_API __declspec(dllimport)
+  #endif
+#else
+  #define CELIB_API
+#endif
+
+#include <string>
+
+
+// #ifdef __cplusplus
 extern "C" {
-#endif
+// #endif
 
-    char* encrypt(char* rawText, int key);
-    char* decrypt(char* encryptedText, int key);
+    CELIB_API char* encrypt(char* rawText, int key);
+    CELIB_API char* decrypt(char* encryptedText, int key);
 
-#ifdef __cplusplus
+// #ifdef __cplusplus
 }
-#endif
+// #endif
 
-#endif // CAESAR_H
+// #endif // CAESAR_H
